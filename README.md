@@ -18,7 +18,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: bgarcevic/ripbi-action@v1
 ```
 
@@ -74,6 +74,13 @@ measure 'Budget Variance' = [Budget] - [Actual]
 
 `[scan].ignore` patterns in a `ripbi.toml` also work. See
 [Keeping objects on purpose](https://bgarcevic.github.io/ripbi/output.html#keeping-objects-on-purpose).
+
+## Versions
+
+`@v1` follows the latest release of this action and never changes its inputs or
+outputs incompatibly. `@v1.0.0` and later tags never move, for a workflow that
+pins one exact version. Either way, the action installs the `version` input's
+ripbi release, `latest` by default.
 
 ## Several models
 
